@@ -1,0 +1,89 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "MascotasCollection",
+    "dateExported": "2024-02-07T23:48:10.105Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "53146a3c-6016-4aa0-82da-4437971a859e",
+            "colId": "0b24d8e3-abf1-45c4-aecf-e0338e63678a",
+            "containerId": "",
+            "name": "Post Mascotas",
+            "url": "http://localhost:3000/api/animales",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-02-07T22:55:16.286Z",
+            "modified": "2024-02-07T23:42:25.406Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"mascota\":\"gato\",\n    \"raza\":\"negra\",\n    \"edad\":\"2 meses\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "00eaa6a4-54f8-4242-97d3-bfa4cd1579eb",
+            "colId": "0b24d8e3-abf1-45c4-aecf-e0338e63678a",
+            "containerId": "",
+            "name": "Get Mascota",
+            "url": "http://localhost:3000/api/animales",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-02-07T23:00:12.563Z",
+            "modified": "2024-02-07T23:05:17.998Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "6f06e47e-aed8-46c2-b334-d1ea17954ae9",
+            "colId": "0b24d8e3-abf1-45c4-aecf-e0338e63678a",
+            "containerId": "",
+            "name": "Get MascotaId",
+            "url": "http://localhost:3000/api/animales/65c415617528d77e93b48ea0",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-02-07T23:30:31.164Z",
+            "modified": "2024-02-07T23:42:43.757Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "d0b1d630-4488-492a-a866-9af25690379b",
+            "colId": "0b24d8e3-abf1-45c4-aecf-e0338e63678a",
+            "containerId": "",
+            "name": "Delete Mascotas",
+            "url": "http://localhost:3000/api/animales/65c4126c5964d66c48de67a4",
+            "method": "DELETE",
+            "sortNum": 40000,
+            "created": "2024-02-07T23:31:32.648Z",
+            "modified": "2024-02-07T23:31:59.013Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "31a36c76-ee4f-4dd2-9125-d5030ea4cb87",
+            "colId": "0b24d8e3-abf1-45c4-aecf-e0338e63678a",
+            "containerId": "",
+            "name": "Put Mascotas",
+            "url": "http://localhost:3000/api/animales/65c4126c5964d66c48de67a4",
+            "method": "PUT",
+            "sortNum": 50000,
+            "created": "2024-02-07T23:32:30.324Z",
+            "modified": "2024-02-07T23:33:23.520Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"mascota\": \"Gato\",\n  \"raza\": \"Blanco\",\n  \"edad\": \"2 años\"\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}

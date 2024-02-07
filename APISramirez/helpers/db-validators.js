@@ -22,8 +22,24 @@ const existeUsuarioById = async (id = '') => {
     }
 }
 
+const existeMascotaById = async (id = '') => {
+    const existeMascota = await animal.findOne({ id });
+    if (existeMascota) {
+        throw new Error(`El nombre del animal con el ${id} no existe`);
+    }
+}
+
+const esUnaRazaValida = async (raza = '') => {
+    const existeRaza = await raza.findOne({ raza });
+    if (!existeRaza) {
+        throw new Error(`La raza ${raza} no existe en la base de datos`);
+    }
+}
+
 module.exports = {
     esRoleValido,
     existenteEmail,
-    existeUsuarioById
+    existeUsuarioById,
+    existeMascotaById,
+    esUnaRazaValida
 }
