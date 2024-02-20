@@ -40,14 +40,14 @@ const getAnimalById = async (req, res) => {
 
 const putAnimales = async (req, res = response) => {
     const { id } = req.params;
-    const { _id, mascota, raza, edad, ...resto } = req.body;
+    const { _id, ...resto } = req.body;
 
-    if (mascota) {
+    /*if (raza) {
         const salt = bcryptjs.genSaltSync();
-        resto.mascota = bcryptjs.hashSync(mascota, salt)
-    }
+        resto.raza = bcryptjs.hashSync(raza, salt);
+    }*/
     
-    const animal = await Animal.findByAnimalIdAndUpdate(id, resto);
+    const animal = await Animal.findByIdAndUpdate(id, resto);
 
     res.status(200).json({
         msg: 'Informacion sobre el animal actualizada exitosamente',
@@ -57,7 +57,7 @@ const putAnimales = async (req, res = response) => {
 
 const animalDelete = async (req, res) => {
     const { id } = req.params;
-    const animal = await Animal.findByAnimalIdAndUpdate(id, { estado: false });
+    const animal = await Animal.findByIdAndUpdate(id, { estado: false });
 
     res.status(200).json({
         msg: 'El animal ha sido borrado exitosamente',

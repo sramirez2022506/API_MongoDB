@@ -4,11 +4,11 @@ const { check } = require('express-validator');
 const { validarCampos } = require('../middlewares/validar_campos');
 
 const {
-    animalGet,
     animalPost,
-    animalDelete,
+    animalGet,
     getAnimalById,
-    putAnimales} = require('../controllers/animal.controller');
+    putAnimales,
+    animalDelete} = require('../controllers/animal.controller');
 
 const { existeMascotaById } = require('../helpers/db-validators');
 
@@ -17,7 +17,7 @@ const router = Router();
 router.get("/", animalGet);
 
 router.get(
-    "/id:",
+    "/:id",
     [
         check('id', 'No es un id valido').isMongoId(),
         check('id').custom(existeMascotaById),

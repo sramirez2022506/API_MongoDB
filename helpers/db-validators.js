@@ -1,5 +1,6 @@
 const Role = require('../models/role');
 const Usuario = require('../models/usuario');
+const Animal = require('../models/animal');
 
 const esRoleValido = async (role = '') => {
     const existeRol = await Role.findOne({role});
@@ -23,7 +24,7 @@ const existeUsuarioById = async (id = '') => {
 }
 
 const existeMascotaById = async (id = '') => {
-    const existeMascota = await animal.findOne({ id });
+    const existeMascota = await Animal.findOne({ id });
     if (existeMascota) {
         throw new Error(`El nombre del animal con el ${id} no existe`);
     }
